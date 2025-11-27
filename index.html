@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Relationship | Premium Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #c9a961;
+            --accent: #e8b4b8;
+            --light: #f8f8f8;
+            --dark: #333333;
+            --text: #333333;
+            --heading: #1a1a2e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--heading);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-menu li {
+            margin-left: 30px;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: var(--secondary);
+        }
+
+        .navbar-cta {
+            margin-left: 30px;
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: #fff;
+            margin-top: 70px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26,26,46,0.9) 0%, rgba(26,26,46,0.7) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 50px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: #fff;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: var(--secondary);
+            font-family: 'Montserrat', sans-serif;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .trust-indicators {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+            animation: fadeInUp 1s ease 0.4s;
+            animation-fill-mode: both;
+        }
+
+        .trust-indicators span {
+            margin-right: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .trust-logos {
+            display: flex;
+            gap: 20px;
+        }
+
+        .trust-logos img {
+            height: 25px;
+            opacity: 0.7;
+        }
+
+        /* Value Proposition Section */
+        .value-section {
+            background-color: var(--light);
+            padding: 120px 0;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 25px auto 0;
+        }
+
+        .value-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .value-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--heading);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 120px 0;
+        }
+
+        .benefits-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .benefits-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .benefits-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .benefits-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 30px;
+        }
+
+        .benefits-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .benefits-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 30px;
+        }
+
+        .benefits-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--heading);
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefits-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: var(--light);
+            padding: 120px 0;
+        }
+
+        .testimonials-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .testimonial-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .testimonial-card:before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--accent);
+            opacity: 0.2;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--text);
+            position: relative;
+            z-index: 1;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid var(--secondary);
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .testimonial-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+        }
+
+        /* Storytelling Section */
+        .story-section {
+            position: relative;
+            padding: 150px 0;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .story-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .story-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26,26,46,0.85) 0%, rgba(26,26,46,0.7) 100%);
+            z-index: -1;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-title {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .story-text {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* Course Modules Section */
+        .modules-section {
+            padding: 120px 0;
+        }
+
+        .modules-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .module-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .module-header {
+            background: #fff;
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .module-header:hover {
+            background-color: var(--light);
+        }
+
+        .module-title {
+            font-size: 1.4rem;
+            color: var(--heading);
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .module-icon {
+            margin-right: 15px;
+            color: var(--secondary);
+        }
+
+        .module-toggle {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .module-item.active .module-toggle {
+            transform: rotate(180deg);
+        }
+
+        .module-content {
+            background: var(--light);
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .module-item.active .module-content {
+            padding: 20px 30px 30px;
+            max-height: 500px;
+        }
+
+        /* Final CTA Section */
+        .cta-section {
+            padding: 150px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #0f0f1e 100%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .cta-subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 50px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .cta-price {
+            font-size: 4rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .guarantee {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--secondary);
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(201, 169, 97, 0.3);
+        }
+
+        .guarantee-text {
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: var(--secondary);
+            position: relative;
+        }
+
+        .footer-column h3:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            opacity: 1;
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact i {
+            color: var(--secondary);
+            margin-right: 10px;
+            font-size: 18px;
+            width: 20px;
+        }
+
+        .footer-newsletter p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-form {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .footer-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            background-color: rgba(255,255,255,0.1);
+            color: #fff;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .footer-form input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-form button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            background-color: var(--secondary);
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .footer-form button:hover {
+            background-color: var(--accent);
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .section-title, .story-title, .cta-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.5s ease;
+            }
+
+            .navbar-menu.active {
+                max-height: 500px;
+            }
+
+            .navbar-menu li {
+                margin: 15px 0;
+            }
+
+            .navbar-cta {
+                margin: 20px 0 0;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .value-section, .benefits-section, .testimonials-section, .modules-section {
+                padding: 80px 0;
+            }
+            
+            .story-section, .cta-section {
+                padding: 100px 0;
+            }
+            
+            .section-title, .story-title, .cta-title {
+                font-size: 2.2rem;
+            }
+            
+            .cta-price {
+                font-size: 3rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .benefits-row {
+                flex-direction: column;
+            }
+            
+            .benefits-row:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .benefits-image, .benefits-content {
+                padding: 0 0 30px;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-column {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo">
+                    <i class="fas fa-heart"></i>
+                    Relationship Mastery
+                </a>
+                <ul class="navbar-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#modules">Course</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="navbar-cta"><a href="#cta" class="btn btn-primary">Enroll Now</a></li>
+                </ul>
+                <button class="navbar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Transform Your Relationship</h1>
+                    <p class="hero-subtitle">The Art of Lasting Intimacy</p>
+                    <a href="#cta" class="btn btn-primary">Begin Your Journey</a>
+                    <div class="trust-indicators">
+                        <span>As seen in:</span>
+                        <div class="trust-logos">
+                            <img src="./image/Forbes_logo.svg.png" alt="Forbes">
+                            <img src="./image/Psychology-Today-Logo-Vector.svg-.png" alt="Psychology Today">
+                            <img src="./image/ELLE_Magazine_Logo.svg.png" alt="Elle">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./image/Course Preview.jpg" alt="Course Preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Why This Course Will Transform Your Relationship</h2>
+            <div class="value-cards">
+                <div class="value-card fade-in">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Deep Connection</h3>
+                    <p>Experience profound emotional intimacy with proven techniques that create lasting bonds.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Lasting Trust</h3>
+                    <p>Build unbreakable foundations of trust that withstands any challenge life brings your way.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Renewed Passion</h3>
+                    <p>Rediscover the excitement and desire that brought you together in the first place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <div class="benefits-row fade-in">
+                <div class="benefits-image">
+                    <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Couple laughing">
+                </div>
+                <div class="benefits-content">
+                    <h3>Discover the Secrets to Lasting Intimacy</h3>
+                    <ul class="benefits-list">
+                        <li>Master communication that deepens your connection</li>
+                        <li>Navigate conflicts with compassion and understanding</li>
+                        <li>Reignite passion and intimacy in your relationship</li>
+                        <li>Build trust that withstands life's challenges</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="benefits-row fade-in">
+                <div class="benefits-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Couple walking">
+                </div>
+                <div class="benefits-content">
+                    <h3>Transform Your Relationship in Just 8 Weeks</h3>
+                    <ul class="benefits-list">
+                        <li>Develop emotional intelligence and empathy</li>
+                        <li>Create shared goals and visions for your future</li>
+                        <li>Heal past wounds and move forward together</li>
+                        <li>Sustain growth and connection long-term</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title fade-in">What Our Graduates Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">"This course transformed our marriage. The techniques are practical yet profoundly impactful. We've never been closer!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>Sarah & Michael</h4>
+                            <p>Married 12 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">"After 20 years of marriage, we rediscovered the love that brought us together. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>David & Linda</h4>
+                            <p>Married 20 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">"We were on the verge of separation. This course gave us the tools to rebuild our relationship. We're happier than ever!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="James" class="testimonial-image">
+                        <div class="testimonial-info">
+                            <h4>James & Thomas</h4>
+                            <p>Together 8 years</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storytelling Section -->
+    <section class="story-section">
+        <div class="story-bg"></div>
+        <div class="story-overlay"></div>
+        <div class="container">
+            <div class="story-content fade-in">
+                <h2 class="story-title">Every Relationship Deserves a Second Chance</h2>
+                <p class="story-text">Love isn't always easy, but it's always worth fighting for. This course has helped hundreds of couples rediscover the magic that brought them together and build a stronger, more resilient bond than ever before.</p>
+                <a href="#cta" class="btn btn-primary">Start Your Transformation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Modules Section -->
+    <section class="modules-section" id="modules">
+        <div class="container">
+            <h2 class="section-title fade-in">What You'll Learn</h2>
+            <div class="modules-container">
+                <div class="module-item fade-in">
+                    <div class="module-header">
+                        <h3 class="module-title"><i class="fas fa-seedling module-icon"></i> Foundations of Connection</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <p>Discover the core principles of emotional intimacy and learn how to create a safe space for vulnerability in your relationship.</p>
+                    </div>
+                </div>
+                <div class="module-item fade-in">
+                    <div class="module-header">
+                        <h3 class="module-title"><i class="fas fa-comments module-icon"></i> The Art of Communication</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <p>Master the communication techniques that foster deep understanding and resolve conflicts before they escalate.</p>
+                    </div>
+                </div>
+                <div class="module-item fade-in">
+                    <div class="module-header">
+                        <h3 class="module-title"><i class="fas fa-balance-scale module-icon"></i> Navigating Conflict with Compassion</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <p>Learn to transform disagreements into opportunities for growth and deeper connection.</p>
+                    </div>
+                </div>
+                <div class="module-item fade-in">
+                    <div class="module-header">
+                        <h3 class="module-title"><i class="fas fa-fire module-icon"></i> Reigniting Passion and Desire</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <p>Rediscover the spark and create lasting intimacy that continues to grow over time.</p>
+                    </div>
+                </div>
+                <div class="module-item fade-in">
+                    <div class="module-header">
+                        <h3 class="module-title"><i class="fas fa-shield-alt module-icon"></i> Building Trust That Lasts</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <p>Develop unshakeable trust and security that forms the foundation of a lifelong partnership.</p>
+                    </div>
+                </div>
+                <div class="module-item fade-in">
+                    <div class="module-header">
+                        <h3 class="module-title"><i class="fas fa-compass module-icon"></i> Creating Your Shared Vision</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <p>Align your dreams and goals to create a shared future that excites and fulfills both partners.</p>
+                    </div>
+                </div>
+                <div class="module-item fade-in">
+                    <div class="module-header">
+                        <h3 class="module-title"><i class="fas fa-chart-line module-icon"></i> Sustaining Growth Over Time</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <p>Implement practices that ensure your relationship continues to evolve and strengthen for years to come.</p>
+                    </div>
+                </div>
+                <div class="module-item fade-in">
+                    <div class="module-header">
+                        <h3 class="module-title"><i class="fas fa-champagne-glasses module-icon"></i> Celebrating Your Journey</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <p>Honor your progress and create rituals that celebrate your love and commitment to each other.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2 class="cta-title fade-in">Ready to Transform Your Relationship?</h2>
+            <p class="cta-subtitle fade-in">Join hundreds of couples who have rediscovered love and built stronger, more fulfilling relationships together.</p>
+            <div class="cta-price fade-in">$497</div>
+            <div class="cta-buttons fade-in">
+                <a href="#" class="btn btn-primary">Enroll Now</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="guarantee fade-in">
+                <div class="guarantee-text">
+                    30-Day<br>Money-Back<br>Guarantee
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-heart"></i>
+                        Relationship Mastery
+                    </a>
+                    <div class="footer-about">
+                        <p>We help couples build deeper connections, reignite passion, and create lasting relationships through our premium courses and expert guidance.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#modules">Course Modules</a></li>
+                        <li><a href="#cta">Enroll Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Free Resources</a></li>
+                        <li><a href="#">Relationship Quiz</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Relationship Lane, Love City, LC 12345</p>
+                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                        <p><i class="fas fa-envelope"></i> info@relationshipmastery.com</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <div class="footer-newsletter">
+                        <p>Subscribe to receive relationship tips and exclusive offers.</p>
+                        <form class="footer-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Relationship Mastery. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        
+        navbarToggle.addEventListener('click', function() {
+            navbarMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const navbarLinks = document.querySelectorAll('.navbar-menu a');
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Accordion functionality for course modules
+        document.querySelectorAll('.module-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const moduleItem = header.parentElement;
+                const isActive = moduleItem.classList.contains('active');
+                
+                // Close all modules
+                document.querySelectorAll('.module-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked module if it wasn't active
+                if (!isActive) {
+                    moduleItem.classList.add('active');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
